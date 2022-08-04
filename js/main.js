@@ -15,13 +15,13 @@ const pecas = {
     "velocidade": -20
   },
 
-  "nucleos":{
+  "nucleos": {
     "forca": 0,
     "poder": 7,
     "energia": 48,
     "velocidade": -24
   },
-  "pernas":{
+  "pernas": {
     "forca": 27,
     "poder": 21,
     "energia": -32,
@@ -35,8 +35,8 @@ const pecas = {
   }
 }
 
-controle.forEach((element)=>{
-  element.addEventListener('click', (event)=>{
+controle.forEach((element) => {
+  element.addEventListener('click', (event) => {
     manipulaDados(event.target.dataset.controle, event.target.parentNode)
     atualizaEstatistica(event.target.dataset.peca);
   })
@@ -45,10 +45,10 @@ controle.forEach((element)=>{
 function manipulaDados(operacao, controle) {
   const peca = controle.querySelector("[data-contador]")
 
-  if(operacao === "-") { //subtrair 1
-  peca.value = parseInt(peca.value) - 1
-  }else { //somar 1
-  peca.value = parseInt(peca.value) + 1
+  if (operacao === "-") { //subtrair 1
+    peca.value = parseInt(peca.value) - 1
+  } else { //somar 1
+    peca.value = parseInt(peca.value) + 1
   }
 }
 
@@ -59,6 +59,6 @@ function atualizaEstatistica(peca) {
 }
 
 function trocaImagem(cor) {
-  document.querySelector(".robo").src="img/Robotron 2000 - " + cor + ".png";
+  document.querySelector(".robo").src = "img/Robotron 2000 - " + cor + ".png";
 }
 
